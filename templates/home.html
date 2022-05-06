@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     
+    <!-- w3 school -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- matretialize -->
 
@@ -24,7 +26,7 @@
     
     
 
-    <title>Hello World!</title>
+    <title>Krispy King</title>
 
     
    
@@ -43,10 +45,10 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="#">About <span class="sr-only">(current)</span></a>
       </li>
-      <li class="nav-item active">
+      <li class="nav-item ">
         <a class="nav-link" href="#">Contact</a>
       </li>
       <li class="nav-item dropdown">
@@ -54,8 +56,8 @@
           Login
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Customer</a>
-          <a class="dropdown-item" href="#">Manager</a>
+          <a class="dropdown-item" href=" {{url_for('login')}}">Customer</a>
+          <a class="dropdown-item" href="#">Employee</a>
           
         </div>
       </li>
@@ -74,8 +76,9 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+
+    <i class="fa fa-shopping-cart" style="font-size:48px;color:BLACK"></i>
   </div>
 </nav>
     
@@ -157,9 +160,15 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <a href="cart.html" <input type="submit" value="Add to cart" class="btn"> </a></center>
-       
+     <!-- <center> <a href="cart.html" <input type="submit" value="Add to cart" class="btn"> </a></center> -->
+
+     <center><a class="btn btn-primary" href="{{url_for('cart')}}" role="button"> Add to cart</a></center>
      
+
+
+     <!-- <a class="btn btn-primary" href="#" role="button">Link</a> -->
+
+
     </div>
     
   </div>
@@ -575,7 +584,48 @@
     
     
     <footer class="footer">
-      
+      <div class="container">
+        <div class="row">
+          <!-- These divs will need classes so that they work as described -->
+          <div class="col m3">
+            <a href="#!" class="brand-logo"
+              ><i class="material-icons" style="font-size: 50px">restaurant_menu </i
+              >Krispy king</a
+            >
+          </div>
+          <div class="col m3">
+            Communities content
+            <ul style="list-style-type: none">
+              <li>About</li>
+              <li>Blog</li>
+            </ul>
+          </div>
+          <div class="col m3">
+            Useful links content
+            <ul style="list-style-type: none">
+              <li>Career</li>
+              <li>Help</li>
+            </ul>
+          </div>
+          <div class="col m3">
+            Connect with us
+            <ul style="list-style-type: none">
+              <a href="https://www.facebook.com/">
+                <i style="font-size: 24px" class="fa">&#xf082;</i>
+              </a>
+              <a href="https://www.linkedin.com/feed/"
+                ><i style="font-size: 24px" class="fa">&#xf08c;</i>
+              </a>
+              <a href="https://twitter.com/"
+                ><i style="font-size: 24px" class="fa">&#xf081;</i>
+              </a>
+              <a href="https://www.instagram.com/?hl=en"
+                ><i style="font-size: 24px" class="fa">&#xf16d;</i>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div> 
     </footer>
     
     

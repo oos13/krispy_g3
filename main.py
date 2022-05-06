@@ -1,4 +1,4 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request, redirect, url_for
 from flask_restful import Api, Resource
 
 app = Flask(__name__)
@@ -16,7 +16,7 @@ def home():
 
 @app.route('/', methods=['GET', 'POST'])
 def cart():
-    return render_template('cart.html')
+    return render_template("cart.html")
 
 # @app.route('/cart/')
 # def cart():
