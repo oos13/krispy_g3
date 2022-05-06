@@ -11,6 +11,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="icon" href="https://glitch.com/favicon.ico" />
     
+    <!-- w3 school -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <!-- matretialize -->
 
@@ -36,7 +38,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="home.html">Krispy King</a>
+  <a class="navbar-brand" href="{{url_for('home')}}">Krispy King</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -74,8 +76,8 @@
     </ul>
     <form class="form-inline my-2 my-lg-0">
       <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
     </form>
+    <i class="fa fa-shopping-cart" style="font-size:48px;color:BLACK"></i>
   </div>
 </nav>
 
@@ -85,9 +87,49 @@
 
 
 <footer class="footer">
-      
+  <div class="container">
+    <div class="row">
+      <!-- These divs will need classes so that they work as described -->
+      <div class="col m3">
+        <a href="#!" class="brand-logo"
+          ><i class="material-icons" style="font-size: 50px">restaurant_menu </i
+          >Krispy king</a
+        >
+      </div>
+      <div class="col m3">
+        Communities content
+        <ul style="list-style-type: none">
+          <li>About</li>
+          <li>Blog</li>
+        </ul>
+      </div>
+      <div class="col m3">
+        Useful links content
+        <ul style="list-style-type: none">
+          <li>Career</li>
+          <li>Help</li>
+        </ul>
+      </div>
+      <div class="col m3">
+        Connect with us
+        <ul style="list-style-type: none">
+          <a href="https://www.facebook.com/">
+            <i style="font-size: 24px" class="fa">&#xf082;</i>
+          </a>
+          <a href="https://www.linkedin.com/feed/"
+            ><i style="font-size: 24px" class="fa">&#xf08c;</i>
+          </a>
+          <a href="https://twitter.com/"
+            ><i style="font-size: 24px" class="fa">&#xf081;</i>
+          </a>
+          <a href="https://www.instagram.com/?hl=en"
+            ><i style="font-size: 24px" class="fa">&#xf16d;</i>
+          </a>
+        </ul>
+      </div>
+    </div>
+  </div> 
 </footer>
-
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 

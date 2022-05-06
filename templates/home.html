@@ -38,7 +38,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-  <a class="navbar-brand" href="home.html">Krispy King</a>
+  <a class="navbar-brand" href="{{url_for('home')}}">Krispy King</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -57,7 +57,7 @@
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href=" {{url_for('login')}}">Customer</a>
-          <a class="dropdown-item" href="#">Employee</a>
+          <a class="dropdown-item" href=" {{url_for('employee')}}">Employee</a>
           
         </div>
       </li>
@@ -67,7 +67,7 @@
           Register
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Customer</a>
+          <a class="dropdown-item" href=" {{url_for('register')}}">Customer</a>
           
           
         </div>
@@ -162,7 +162,7 @@
     <div class = "checkouttt">
      <!-- <center> <a href="cart.html" <input type="submit" value="Add to cart" class="btn"> </a></center> -->
 
-     <center><a class="btn btn-primary" href="{{url_for('cart')}}" role="button"> Add to cart</a></center>
+     <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
      
 
 
@@ -248,7 +248,7 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <input type="submit" value="Add to cart" class="btn"></center>
+      <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
         
     </div>
         </div>
@@ -326,7 +326,7 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <input type="submit" value="Add to cart" class="btn"></center>
+      <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
         
     </div>
         </div>
@@ -410,7 +410,7 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <input type="submit" value="Add to cart" class="btn"></center>
+      <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
         
     </div>
         </div>
@@ -489,7 +489,7 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <input type="submit" value="Add to cart" class="btn"></center>
+      <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
         
     </div>
         </div>
@@ -567,7 +567,7 @@
   </p>
     
     <div class = "checkouttt">
-     <center> <input type="submit" value="Add to cart" class="btn"></center>
+      <center><a class="btn btn-primary" href=" {{url_for('cart')}}" role="button"> Add to cart</a></center>
         
     </div>
         </div>

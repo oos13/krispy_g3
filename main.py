@@ -13,17 +13,12 @@ api = Api(app)
 def home():
     return render_template('home.html')
 
-
-@app.route('/', methods=['GET', 'POST'])
+@app.route('/cart/')
 def cart():
     return render_template("cart.html")
 
-# @app.route('/cart/')
-# def cart():
-#     return render_template("cart.html")
-
-@app.route('/registration/')
-def registration():
+@app.route('/register/')
+def register():
     return render_template("register.html")
 
 @app.route('/login/')
@@ -33,6 +28,10 @@ def login():
 @app.route('/menu/')
 def menu():
     return render_template("menu.html")
+
+@app.route('/employee/')
+def employee():
+    return render_template("employee.html")
 
 
 if __name__ == '__main__':
