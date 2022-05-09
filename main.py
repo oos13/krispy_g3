@@ -1,7 +1,9 @@
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 from flask_restful import Api, Resource
+from db_config import MySql
+from app import app
 
-app = Flask(__name__)
+
 api = Api(app)
 
 
@@ -21,9 +23,39 @@ def cart():
 def register():
     return render_template("register.html")
 
-@app.route('/login/')
+@app.route('/login/', methods = ['POST'])
 def login():
-    return render_template("login.html")
+    try:
+        json = request.json
+        _email = json['Email']
+        _cust_password = json['Customer_password']
+
+        if _email and _cust_password and request.method == 'POST':
+            conn = MySql.connect()
+            cursor = conn.cursor()
+
+            SQL_Query = "SELECT * FROM Customers WHERE Email=%s"
+            SQL_where = (_email)
+            
+            if cursor.execute(SQL_Query, SQL_where):
+                return render_template('home.html')
+
+            else:
+                return render_template("login.html")
+    except Exception():
+        print("error")
+    finally:
+        cursor.close()
+        conn.close()
+
+
+            
+
+
+
+    
+
+
 
 @app.route('/menu/')
 def menu():
