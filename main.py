@@ -27,8 +27,8 @@ def register():
 def login():
     try:
         json = request.json
-        _email = json['Email']
-        _cust_password = json['Customer_password']
+        _email = json['uname']
+        _cust_password = json['psw']
 
         if _email and _cust_password and request.method == 'POST':
             conn = MySql.connect()
